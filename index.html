@@ -31,6 +31,18 @@
     width: 100%;
   }
 
+  #back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: none;
+  }
+
   h1 {
     font-size: 24px;
     margin-bottom: 20px;
@@ -334,10 +346,29 @@
 
   
 </div>
+  <button id="back-to-top" onclick="scrollToTop()">⇧</button>
+
 
   <footer>
   &copy; CodeMite | <a href="https://youtube.com/najmiter" target="_blank">Visit my YouTube Channel</a>
 </footer>
+
+  <script>
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 100) {
+      document.getElementById('back-to-top').style.display = 'block';
+    } else {
+      document.getElementById('back-to-top').style.display = 'none';
+    }
+  });
+
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+</script>
   
 </body>
 </html>
