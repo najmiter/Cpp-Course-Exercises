@@ -48,10 +48,14 @@
     text-decoration: none;
     font: inherit;
     margin: inherit;
+    transition: all ease 150ms;
+  }
+
+  a:is(:hover, :active) {
+    opacity: 0.9;
   }
 
   li::marker {
-    
     font-weight: bold;
     color: #cccccc;
   }
